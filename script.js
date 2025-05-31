@@ -48,12 +48,18 @@ async function handleFormSubmit(event) {
     
     const formData = new FormData(form);
     const restaurantData = {
+        user_name: formData.get('user_name').trim(),
         restaurant_name: formData.get('restaurant_name').trim(),
         comment: formData.get('comment').trim() || null,
         restaurant_url: formData.get('restaurant_url').trim() || null,
     };
     
     // バリデーション
+    if (!restaurantData.user_name) {
+        showError('ユーザー名は必須です');
+        return;
+    }
+    
     if (!restaurantData.restaurant_name) {
         showError('店名は必須です');
         return;

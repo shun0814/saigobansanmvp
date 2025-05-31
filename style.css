@@ -219,11 +219,22 @@ body {
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
 }
 
+.restaurant-header {
+    margin-bottom: 12px;
+}
+
 .restaurant-name {
     font-size: 1.3rem;
     font-weight: 700;
     color: #333;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
+}
+
+.user-name {
+    font-size: 0.9rem;
+    color: #667eea;
+    font-weight: 500;
+    opacity: 0.8;
 }
 
 .restaurant-comment {

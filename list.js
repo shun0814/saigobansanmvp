@@ -72,7 +72,10 @@ function createRestaurantCard(restaurant, index) {
     const hasUrl = restaurant.restaurant_url && restaurant.restaurant_url.trim();
     
     card.innerHTML = `
-        <div class="restaurant-name">${escapeHtml(restaurant.restaurant_name)}</div>
+        <div class="restaurant-header">
+            <div class="restaurant-name">${escapeHtml(restaurant.restaurant_name)}</div>
+            <div class="user-name">by ${escapeHtml(restaurant.user_name || '匿名')}</div>
+        </div>
         ${restaurant.comment ? `<div class="restaurant-comment">${escapeHtml(restaurant.comment)}</div>` : ''}
         <div class="restaurant-meta">
             ${hasUrl ? `<a href="${escapeHtml(restaurant.restaurant_url)}" target="_blank" rel="noopener noreferrer" class="restaurant-url">🍴 レストランを見る</a>` : '<span></span>'}
