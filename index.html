@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>最後の晩餐</title>
+    <meta name="description" content="人生最後に食べたいレストランを1店だけ共有するシンプルなサービス">
+    <link rel="stylesheet" href="style.css">
+    <!-- Supabase SDK -->
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- ヘッダー -->
+        <header class="header">
+            <h1>🍽️ 最後の晩餐</h1>
+            <p class="subtitle">人生最後に食べたい、たった1店のレストランを教えてください</p>
+            <div class="header-nav">
+                <a href="list.html" class="nav-link">📋 みんなの最後の晩餐を見る</a>
+            </div>
+        </header>
+
+        <!-- 投稿フォーム -->
+        <section class="form-section">
+            <h2>📝 あなたの選択を登録</h2>
+            <form id="restaurant-form" class="restaurant-form">
+                <div class="form-group">
+                    <label for="restaurant-name">店名 <span class="required">*</span></label>
+                    <input type="text" id="restaurant-name" name="restaurant_name" required maxlength="100" placeholder="例：すし青木">
+                </div>
+                
+                <div class="form-group">
+                    <label for="comment">選んだ理由・コメント</label>
+                    <textarea id="comment" name="comment" maxlength="200" rows="3" placeholder="なぜこの店を最後に選びましたか？（200文字以内）"></textarea>
+                    <div class="char-count">
+                        <span id="char-count">0</span>/200文字
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="restaurant-url">参考URL</label>
+                    <input type="url" id="restaurant-url" name="restaurant_url" placeholder="食べログ、公式サイトなど">
+                </div>
+                
+                <button type="submit" class="submit-btn" id="submit-btn">
+                    <span class="btn-text">登録する</span>
+                    <span class="loading-spinner" style="display: none;">登録中...</span>
+                </button>
+            </form>
+            
+            <div class="form-footer">
+                <p>登録後は <a href="list.html" class="inline-link">一覧ページ</a> で確認できます</p>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 最後の晩餐 - Simple & Beautiful</p>
+    </footer>
+
+    <script src="env.js"></script>
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
