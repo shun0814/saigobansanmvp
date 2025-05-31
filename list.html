@@ -17,6 +17,21 @@
             <p class="subtitle">世界の終わりに選ばれた、特別な味たち</p>
             <div class="header-nav">
                 <a href="index.html" class="nav-link">✏️ 新しく投稿する</a>
+                <div class="share-buttons">
+                    <span class="share-label">📢 シェアする</span>
+                    <button class="share-btn twitter-btn" onclick="shareToTwitter()">
+                        🐦 Twitter
+                    </button>
+                    <button class="share-btn facebook-btn" onclick="shareToFacebook()">
+                        📘 Facebook
+                    </button>
+                    <button class="share-btn line-btn" onclick="shareToLine()">
+                        💬 LINE
+                    </button>
+                    <button class="share-btn copy-btn" onclick="copyToClipboard()">
+                        📋 URLコピー
+                    </button>
+                </div>
             </div>
         </header>
 
@@ -40,5 +55,6 @@
     <script src="env.js"></script>
     <script src="config.js"></script>
     <script src="list.js"></script>
+    <script src="share.js"></script>
 </body>
 </html> 
